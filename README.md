@@ -32,7 +32,7 @@
 ## 使用方式
 
 ### 1. 安装依赖
-
+安装后会新建`node_modules`目录，自动下载一些依赖，例如`pdf-parse`。
 ```bash
 npm install
 ```
