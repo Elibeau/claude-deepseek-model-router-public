@@ -155,9 +155,3 @@ http://127.0.0.1:8787
 ```
 
 如果需要远程 HTTPS，可以把 Router 挂到你自己的 HTTPS 反向代理或 Cloudflare Workers 后面。
-
-## 安全说明
-
-- 不要把真实的 `router.config.json`、`claude-desktop-config.json`、日志或 PID 文件提交到仓库
-- 公开仓库里只保留 `.example` 配置文件
-- 本仓库里的占位 key 都是示例值，不可直接使用
