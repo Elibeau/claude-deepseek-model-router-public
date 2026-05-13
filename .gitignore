@@ -1,0 +1,6 @@
+router.config.json
+claude-desktop-config.json
+logs/
+run/
+node_modules/
+.DS_Store

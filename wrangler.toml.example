@@ -1,0 +1,40 @@
+name = "claude-deepseek-model-router"
+main = "src/worker.js"
+compatibility_date = "2026-05-13"
+
+[vars]
+ROUTER_CONFIG = '''
+{
+  "upstream": {
+    "baseUrl": "https://api.deepseek.com/anthropic",
+    "apiFormat": "anthropic",
+    "authHeader": "x-api-key",
+    "authScheme": "",
+    "extraHeaders": {}
+  },
+  "compatibility": {
+    "rewriteForcedToolChoice": true,
+    "normalizeUnsupportedContentBlocks": true,
+    "dropMcpServers": true,
+    "extractPdfDocuments": true,
+    "maxExtractedDocumentChars": 120000
+  },
+  "strictModelMapping": true,
+  "models": {
+    "claude-opus-4-7": {
+      "model": "deepseek-v4-pro",
+      "thinking": { "type": "enabled" },
+      "output_config": { "effort": "high" }
+    },
+    "claude-sonnet-4-6": {
+      "model": "deepseek-v4-flash",
+      "thinking": { "type": "enabled" },
+      "output_config": { "effort": "high" }
+    }
+  },
+  "displayNames": {
+    "claude-opus-4-7": "DeepSeek-V4-Pro",
+    "claude-sonnet-4-6": "DeepSeek-V4-Flash"
+  }
+}
+'''

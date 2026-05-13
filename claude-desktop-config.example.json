@@ -1,0 +1,9 @@
+{
+  "enterpriseConfig": {
+    "inferenceProvider": "gateway",
+    "inferenceGatewayBaseUrl": "http://127.0.0.1:8787",
+    "inferenceGatewayApiKey": "sk-your-gateway-api-key",
+    "inferenceGatewayAuthScheme": "bearer",
+    "inferenceModels": "[{\"name\":\"claude-opus-4-7\",\"supports1m\":true},{\"name\":\"claude-sonnet-4-6\",\"supports1m\":true}]"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "listen": {
+    "host": "127.0.0.1",
+    "port": 8787
+  },
+  "gatewayApiKey": "sk-your-gateway-api-key",
+  "upstream": {
+    "baseUrl": "https://api.deepseek.com/anthropic",
+    "apiFormat": "anthropic",
+    "apiKey": "sk-your-upstream-api-key",
+    "authHeader": "x-api-key",
+    "authScheme": "",
+    "extraHeaders": {}
+  },
+  "compatibility": {
+    "rewriteForcedToolChoice": true,
+    "normalizeUnsupportedContentBlocks": true,
+    "dropMcpServers": true,
+    "extractPdfDocuments": true,
+    "maxExtractedDocumentChars": 120000
+  },
+  "strictModelMapping": true,
+  "models": {
+    "claude-opus-4-7": {
+      "model": "deepseek-v4-pro",
+      "thinking": { "type": "enabled" },
+      "output_config": { "effort": "high" }
+    },
+    "claude-sonnet-4-6": {
+      "model": "deepseek-v4-flash",
+      "thinking": { "type": "enabled" },
+      "output_config": { "effort": "high" }
+    }
+  },
+  "displayNames": {
+    "claude-opus-4-7": "DeepSeek-V4-Pro",
+    "claude-sonnet-4-6": "DeepSeek-V4-Flash"
+  }
+}
